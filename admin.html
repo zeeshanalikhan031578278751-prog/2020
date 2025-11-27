@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ایڈمن پینل - نان-سکرولنگ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+
+    <header>
+        <h1>🔒 ایڈمن پینل</h1>
+        <nav>
+            <a href="index.html">دکان کا نظارہ</a>
+            <a href="#" onclick="alert('لاگ آؤٹ کی فرضی کارروائی')">لاگ آؤٹ</a>
+        </nav>
+    </header>
+
+    <main class="container admin-container">
+        <div id="login-form" class="admin-section">
+            <h2>ایڈمن لاگ ان</h2>
+            <form id="loginForm" onsubmit="handleAdminLogin(event)">
+                <label for="adminCode">ایڈمن کوڈ (2004):</label>
+                <input type="password" id="adminCode" required placeholder="کوڈ 2004 ڈالیں">
+                <button type="submit">لاگ ان کریں</button>
+                <p id="loginMessage" style="color: red; text-align: right;"></p>
+            </form>
+        </div>
+
+        <div id="order-notifications" class="admin-section" style="display:none;">
+            <h2>🔔 نئے آرڈرز</h2>
+            <div id="pending-orders">
+                <p style="text-align: center;">کوئی نیا آرڈر نہیں ہے۔</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
